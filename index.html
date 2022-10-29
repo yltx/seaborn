@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        document.addEventListener("keydown", function (event) {
+            setTimeout(() => { document.getElementById("output").innerHTML = document.getElementById("input").value.replace(/\n/g, '<br />'); }, 10);
+        });
+    </script>
+    <style class="WidgetStyle">
+        @font-face {
+            font-family: mizukiFont;
+            src: url('https://cdn.jsdelivr.net/gh/Yanstory/prts-extend/mizukifont/mizukifont.woff');
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="font-family: mizukifont">Translator for seaborn</h1>
+    <h2 style="font-family: mizukifont">Input:</h2>
+    <textarea type="text" id="input"></textarea>
+    <h2 style="font-family: mizukifont">Output:</h2>
+    <div
+        style="background: linear-gradient(180deg, #060606, #919191); color: white;font-family: mizukifont; transform: rotate(180deg); font-size: smaller; pointer-events: none; padding: 1em 9em;">
+        <p id="output"></p>
+    </div>
+</body>
+
+</html>
